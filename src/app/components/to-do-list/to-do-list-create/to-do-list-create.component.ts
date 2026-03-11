@@ -27,6 +27,9 @@ export class ToDoListCreateComponent implements OnInit {
   addNewTask() {
     const description = this.formGroup;
     const title = this.formGroup;
+    if(description.value.description == "" || title.value.title == ""){
+      return;
+    }
     const taskItem: IToDoItem = {
       date: new Date(),
       description : description.value.description! ,
