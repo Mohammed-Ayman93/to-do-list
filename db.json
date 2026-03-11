@@ -1,0 +1,19 @@
+{
+  "IToDoItem": [
+    {
+      "id": "67385023923.38546",
+      "date": "2026-03-10T18:53:38.620Z",
+      "description": "test1",
+      "isChecked": false,
+      "title": "test"
+    },
+    {
+      "id": "452034661711.58014",
+      "date": "2026-03-10T18:54:40.852Z",
+      "description": "to upload video on my linked in",
+      "isChecked": false,
+      "title": "complete the record"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -1,0 +1,21 @@
+<div class="form-check mt-1">
+    <input class="form-check-input" (change)="checkTask()" type="checkbox" name="" [checked]="toDoItem.isChecked">
+</div>
+<div class="flex-grow-1 ">
+    <h6 class="fw-semibold mb-1 text-muted" [ngClass]="{'text-decoration-line-through': toDoItem.isChecked}">
+        {{toDoItem.title}}
+    </h6>
+    
+    <p class="mb-2 small text-secondary d-flex justify-content-between">
+        {{toDoItem.description}}
+        <button
+        (click)="deletItem()"
+        class="btn btn-outline-danger"><i class="bi bi-trash"></i></button>
+    </p>
+
+    <div class="text-end">
+        <span class="badge bg-light text-dark border">
+            {{toDoItem.date | date:"short"}}
+        </span>
+    </div>
+</div>

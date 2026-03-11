@@ -1,0 +1,8 @@
+<form [formGroup]="formGroup" class='card shadow-sm border-0 w-75 m-auto bg-body-tertiary input-group gap-2 text-center'>
+<h2 class="text-success-emphasis text-capitalize">Add new Task</h2>
+
+    <input formControlName="title"  type="text"  class="w-75 m-auto form-control border border-1 border-info" placeholder="Task title">
+    
+    <textarea formControlName="description" type="text" class="w-75 m-auto form-control border border-1 border-info" placeholder="Task description" ></textarea>
+    <button  class="btn btn-success rounded w-75 m-auto" (click)="addNewTask()">Add new Task</button>
+</form>

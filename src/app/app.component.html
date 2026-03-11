@@ -1,0 +1,50 @@
+<!-- <app-cards-main /> -->
+<nav class="navbar navbar-dark bg-dark shadow-sm">
+  <div class="container py-2">
+    <a routerLink="list-items" class="navbar-brand fw-bold">📝 To Do List</a>
+    <div class="d-flex justify-content-around gap-2">
+      @if(toDo.main()){
+      <form class="d-flex me-5" role="search">
+        <input class="form-control me-2" [formControl]="search" type="search" placeholder="Search"
+          aria-label="Search" />
+      </form>
+      }
+      <button class="btn btn-outline-primary" routerLink="creat-item"
+        routerLinkActive="btn-primary text-light  border-light fw-bold border-2">
+        Add Item</button>
+      <button class="btn btn-outline-primary" routerLinkActive="btn-primary text-light  border-light fw-bold border-2"
+        routerLink="list-items">
+        Items List </button>
+    </div>
+  </div>
+</nav>
+@if(toDo.main()){
+  @if(!toDo.toDoListArr().length){
+  <div>
+    <h2 class="text-center mt-5 text-warning text-capitalize fs-1">there is no tasks </h2>
+  </div>
+  }@else {
+  <div class="container">
+    <h2 class="text-center my-4 fw-bold text-secondary">
+      <i class="bi bi-card-checklist me-2"></i> TO DO LIST APP
+    </h2>
+  </div>
+  }
+}
+<router-outlet />
+
+
+<footer class="bg-dark text-light py-4 mt-5">
+  <div class="container d-flex justify-content-between align-items-center flex-wrap">
+    <span class="small">© 2026 Company, Inc</span>
+
+    <div>
+      <a href="#" class="text-light me-3">
+        <i class="bi bi-instagram fs-5"></i>
+      </a>
+      <a href="#" class="text-light">
+        <i class="bi bi-facebook fs-5"></i>
+      </a>
+    </div>
+  </div>
+</footer>
